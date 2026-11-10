@@ -170,7 +170,7 @@ jobs:
         if: always()
       - name: Save the test output
         if: always()
-        uses: actions/upload-artifact@604373da6381bf24206979c74d06a550515601b9 # v4.4.1
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: test-output-${{ matrix.ubuntu }}-${{ matrix.r }}
           path: r/check/arrow.Rcheck/tests/testthat.Rout*
@@ -230,7 +230,7 @@ jobs:
         if: always()
       - name: Save the test output
         if: always()
-        uses: actions/upload-artifact@604373da6381bf24206979c74d06a550515601b9 # v4.4.1
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: test-output-bundled
           path: r/check/arrow.Rcheck/tests/testthat.Rout*
@@ -292,7 +292,7 @@ jobs:
         # So that they're unique when multiple are downloaded in the next step
         shell: bash
         run: mv libarrow.zip libarrow-rtools${{ matrix.config.rtools }}-${{ matrix.config.arch }}.zip
-      - uses: actions/upload-artifact@604373da6381bf24206979c74d06a550515601b9 # v4.4.1
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: libarrow-rtools${{ matrix.config.rtools }}-${{ matrix.config.arch }}.zip
           path: libarrow-rtools${{ matrix.config.rtools }}-${{ matrix.config.arch }}.zip
