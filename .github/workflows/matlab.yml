@@ -62,7 +62,7 @@ jobs:
     if: ${{ !contains(github.event.pull_request.title, 'WIP') }}
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
       - name: Install ninja-build
@@ -110,7 +110,7 @@ jobs:
             macos-version: "14"
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
       - name: Install ninja-build
@@ -151,7 +151,7 @@ jobs:
     if: ${{ !contains(github.event.pull_request.title, 'WIP') }}
     steps:
       - name: Check out repository        
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
       - name: Install MATLAB

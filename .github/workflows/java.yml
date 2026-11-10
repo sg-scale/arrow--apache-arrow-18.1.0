@@ -67,7 +67,7 @@ jobs:
       MAVEN: ${{ matrix.maven }}
     steps:
       - name: Checkout Arrow
-        uses: actions/checkout@3df4ab11eba7bda6032a0b82a6bb43b11571feac # v4.0.0
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.0.0
         with:
           fetch-depth: 0
           submodules: recursive
@@ -121,7 +121,7 @@ jobs:
           distribution: 'zulu'
           java-version: ${{ matrix.jdk }}
       - name: Checkout Arrow
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
           submodules: recursive
@@ -152,7 +152,7 @@ jobs:
           java-version: ${{ matrix.jdk }}
           distribution: 'temurin'
       - name: Checkout Arrow
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
           submodules: recursive
