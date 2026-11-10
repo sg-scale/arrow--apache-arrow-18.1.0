@@ -121,7 +121,7 @@ jobs:
               --clang_format_binary=clang-format-${CLANG_TOOLS} \
               --exclude_glob=cpp/build-support/lint_exclusions.txt \
               --source_dir=r/src --quiet --fix
-      - uses: r-lib/actions/setup-r@11a22a908006c25fe054c4ef0ac0436b1de3edbe # v2.6.4
+      - uses: r-lib/actions/setup-r@f9a764fea8d5c63df6ef9a5c7795bf7deb5d7e05 # v2.14.0
         if: env.R_DOCS == 'true' || env.R_CODE == 'true' || endsWith(github.event.comment.body, 'everything')
       - name: Update R docs
         if: env.R_DOCS == 'true' || endsWith(github.event.comment.body, 'everything')
