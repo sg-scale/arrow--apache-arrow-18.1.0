@@ -149,7 +149,7 @@ jobs:
           git config user.name "$(git log -1 --pretty=format:%an)"
           git config user.email "$(git log -1 --pretty=format:%ae)"
           git commit -a -m 'Autoformat/render all the things [automated commit]' || echo "No changes to commit"
-      - uses: r-lib/actions/pr-push@11a22a908006c25fe054c4ef0ac0436b1de3edbe # v2.6.4
+      - uses: r-lib/actions/pr-push@f9a764fea8d5c63df6ef9a5c7795bf7deb5d7e05 # v2.14.0
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -170,7 +170,7 @@ jobs:
           git remote add upstream https://github.com/${{ github.repository }}
           git fetch --unshallow upstream ${{ github.event.repository.default_branch }}
           git rebase upstream/${{ github.event.repository.default_branch }}
-      - uses: r-lib/actions/pr-push@11a22a908006c25fe054c4ef0ac0436b1de3edbe # v2.6.4
+      - uses: r-lib/actions/pr-push@f9a764fea8d5c63df6ef9a5c7795bf7deb5d7e05 # v2.14.0
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           args: "--force"
